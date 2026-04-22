@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AquaSense - Making the invisible visible</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#eff0fa",
+                        "tertiary-container": "#df3429",
+                        "on-tertiary-container": "#ffffff",
+                        "on-tertiary-fixed": "#410001",
+                        "surface": "#f9f9ff",
+                        "surface-container": "#ecedf7",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#1a73e8",
+                        "secondary-fixed-dim": "#afc7fb",
+                        "on-primary-container": "#ffffff",
+                        "on-surface": "#191c23",
+                        "inverse-primary": "#adc7ff",
+                        "surface-bright": "#f9f9ff",
+                        "surface-container-high": "#e6e8f2",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#930004",
+                        "outline": "#727785",
+                        "on-primary-fixed": "#001a41",
+                        "on-surface-variant": "#414754",
+                        "on-primary-fixed-variant": "#004493",
+                        "tertiary-fixed": "#ffdad5",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e0e2ec",
+                        "outline-variant": "#c1c6d6",
+                        "secondary": "#475e8c",
+                        "primary": "#005bbf",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#d8e2ff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#adc7ff",
+                        "secondary-container": "#b2c9fe",
+                        "surface-container-low": "#f2f3fd",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#191c23",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#3d5481",
+                        "surface-tint": "#005bc0",
+                        "inverse-surface": "#2d3038",
+                        "primary-fixed": "#d8e2ff",
+                        "background": "#f9f9ff",
+                        "on-secondary-fixed": "#001a41",
+                        "on-secondary-fixed-variant": "#2e4673",
+                        "tertiary": "#bb1712",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "surface-variant": "#e0e2ec",
+                        "surface-dim": "#d8d9e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .liquid-gradient {
+            background: linear-gradient(135deg, #005bbf 0%, #1a73e8 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface overflow-hidden">
+<!-- Splash Screen Wrapper -->
+<main class="relative min-h-screen flex flex-col items-center justify-center p-6 bg-surface overflow-hidden">
+<!-- Abstract Water Background Elements -->
+<div class="absolute inset-0 z-0">
+<!-- Fluid high-impact visual background -->
+<div class="absolute top-[-10%] right-[-10%] w-[80%] h-[60%] rounded-full bg-primary-fixed opacity-20 blur-[120px]"></div>
+<div class="absolute bottom-[-20%] left-[-10%] w-[90%] h-[70%] rounded-full bg-secondary-container opacity-30 blur-[150px]"></div>
+<!-- Texture Layer -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDchB0elWCKom9ATiKXkov_LX3kl7dJnF6CCkzjjKfH8LuqyK2s6jBDKv2lOz-6kqDy3QSwzmL6ZC7KK9NflQcI3DrMH8rfT8qREc-F-nwHy7B9UWzrnFxYV1QOiN42MEhIDJZe3LcmnkltesIlihlebClOcL2aQ8_IFqeYF0-7jKwMfsuRo54jMyoFETIIZSg7469gRCHBqZS3aD_kDyfM3QD_ZBinEJEPSN2G6gKSI4FQAb2BBAJu8dACVEpFFKkXN0WbiVxVN21u')"></div>
+</div>
+<!-- Central Branding Container -->
+<div class="relative z-10 flex flex-col items-center max-w-lg w-full text-center">
+<!-- Hero Visual: The "Invisible" Eye / Sensor Concept -->
+<div class="relative mb-12 group">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-150 animate-pulse"></div>
+<div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full liquid-gradient flex items-center justify-center shadow-[0px_0px_64px_rgba(0,91,191,0.25)]">
+<span class="material-symbols-outlined text-white text-6xl md:text-7xl" data-icon="water_drop" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<!-- Orbital Elements (Tech Accents) -->
+<div class="absolute top-0 left-0 w-full h-full rounded-full border border-primary/10 animate-[spin_10s_linear_infinite]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary shadow-sm"></div>
+</div>
+</div>
+<!-- Typography Lockup -->
+<div class="space-y-4">
+<h1 class="text-6xl md:text-8xl font-bold tracking-tighter bg-gradient-to-b from-primary to-primary-container bg-clip-text text-transparent font-headline">
+                    AquaSense
+                </h1>
+<div class="flex items-center justify-center space-x-3">
+<div class="h-[1px] w-8 bg-outline-variant/30"></div>
+<p class="text-sm md:text-base font-medium tracking-[0.2em] text-outline uppercase font-label">
+                        Making the invisible visible
+                    </p>
+<div class="h-[1px] w-8 bg-outline-variant/30"></div>
+</div>
+</div>
+<!-- Precision Metric Micro-Card (Digital Laboratory Aesthetic) -->
+<div class="mt-20 w-full max-w-xs glass-panel rounded-xl p-4 border border-white/40 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[10px] font-bold text-primary/60 tracking-widest uppercase font-label">System Status</span>
+<div class="flex items-center space-x-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+<span class="text-[10px] font-semibold text-primary font-label">CALIBRATING</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="h-1 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full transition-all duration-1000"></div>
+</div>
+<div class="h-1 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 transition-all duration-1000"></div>
+</div>
+<div class="h-1 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-0 transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Footer Tagline -->
+<div class="absolute bottom-12 z-10 flex flex-col items-center">
+<div class="flex flex-col items-center space-y-4">
+<div class="p-3 rounded-full bg-surface-container-low shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="waves">waves</span>
+</div>
+<p class="text-xs text-outline/60 font-medium tracking-wide">
+                    SECURE ENVIRONMENTAL MONITORING v4.0.2
+                </p>
+</div>
+</div>
+<!-- Decorative Image Overlay (Subtle) -->
+<div class="absolute inset-0 pointer-events-none mix-blend-overlay opacity-20">
+<img class="w-full h-full object-cover" data-alt="abstract macro photography of crystal clear water ripples with bright highlights and deep blue shadows in a high-tech clinical style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdifLewKJFNzl0ZWjMrSCMyzOWZd8rqa-qiz3JurG966TmKAWi76ebp0Irwrd64rvaFeorYIQsXProNTVJNMSV8Y5JS-fceCg6OrUg6pv9SzFSS6oirdmPVHF8_JtlUVKBfrxoNGm8MIkC4rM3zvDpm_sDhNQAI0GYtZbB1YFQonf_uLT9CZBeEQE7ixqE2Cxfu3uAJs-5jDqQJUsBX1fKq7VZVHDL1owCBlQC3_Ny42GhFMAU0rcNbzTBSz_ySo7eMiFBLMNkhMEA"/>
+</div>
+</main>
+<!-- Suppressed Nav Shells for Splash Screen Experience (Per Conflict Resolution Protocol) -->
+<!-- This screen is Transactional/Onboarding/Splash, so BottomNavBar and TopAppBar are excluded -->
+</body></html>

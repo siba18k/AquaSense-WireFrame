@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AquaSense Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eff0fa",
+                    "tertiary-container": "#df3429",
+                    "on-tertiary-container": "#ffffff",
+                    "on-tertiary-fixed": "#410001",
+                    "surface": "#f9f9ff",
+                    "surface-container": "#ecedf7",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#1a73e8",
+                    "secondary-fixed-dim": "#afc7fb",
+                    "on-primary-container": "#ffffff",
+                    "on-surface": "#191c23",
+                    "inverse-primary": "#adc7ff",
+                    "surface-bright": "#f9f9ff",
+                    "surface-container-high": "#e6e8f2",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#930004",
+                    "outline": "#727785",
+                    "on-primary-fixed": "#001a41",
+                    "on-surface-variant": "#414754",
+                    "on-primary-fixed-variant": "#004493",
+                    "tertiary-fixed": "#ffdad5",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e0e2ec",
+                    "outline-variant": "#c1c6d6",
+                    "secondary": "#475e8c",
+                    "primary": "#005bbf",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d8e2ff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#adc7ff",
+                    "secondary-container": "#b2c9fe",
+                    "surface-container-low": "#f2f3fd",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c23",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#3d5481",
+                    "surface-tint": "#005bc0",
+                    "inverse-surface": "#2d3038",
+                    "primary-fixed": "#d8e2ff",
+                    "background": "#f9f9ff",
+                    "on-secondary-fixed": "#001a41",
+                    "on-secondary-fixed-variant": "#2e4673",
+                    "tertiary": "#bb1712",
+                    "tertiary-fixed-dim": "#ffb4a9",
+                    "surface-variant": "#e0e2ec",
+                    "surface-dim": "#d8d9e3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9ff;
+        }
+        .headline-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50 bg-surface/80 dark:bg-surface-dark/80 backdrop-blur-xl shadow-[0px_0px_32px_rgba(25,28,35,0.06)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a young male laboratory technician in a clean setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrLpsRjsyHEONeGuuDbR9ewFz8-8hFJIARvBKq2t_YP45pGvTN_pNx4PoEwKfHCl9zxwZABTEO9ADIqubzvggN0CfS13zYbG4cxYiezHFXyiwQitopKUcq-zZ06bcPNP88nTua4e2_FSbDyfyq8viGMeKToknxuoWv5iumK3x9x4T5hCtVvUSv8Bd_wnX6mkhQu8rfcmxDNA-RdUpcFuUtP4x7O2Wd-FCiv8d3Rh5gju_EgfnvhYdJKytqO9yvu1bCFQxyeCe30YSS"/>
+</div>
+<span class="font-['Space_Grotesk'] text-xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">AquaSense</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-blue-50 transition-colors active:scale-95 duration-200 text-blue-700">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="max-w-2xl mx-auto px-6 pt-8 space-y-8">
+<!-- Hero Section / Screen Title -->
+<section class="space-y-2">
+<h1 class="headline-font text-3xl font-bold tracking-tight text-on-surface">Alerts &amp; Logs</h1>
+<p class="text-outline font-medium">Real-time water quality intelligence</p>
+</section>
+<!-- High Urgency Alert Simulation -->
+<section class="relative overflow-hidden rounded-xl bg-tertiary shadow-[0px_0px_32px_rgba(187,23,18,0.12)] border-none">
+<!-- Alert Gradient Glow -->
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary to-tertiary-container opacity-90"></div>
+<div class="relative p-6 flex items-start gap-4">
+<div class="bg-white/20 p-3 rounded-xl backdrop-blur-md">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between items-center">
+<span class="text-white/80 font-bold uppercase tracking-widest text-[10px] headline-font">Critical Alert</span>
+<span class="text-white/60 text-[10px]">Just Now</span>
+</div>
+<h2 class="text-white text-xl font-bold headline-font leading-tight">Unsafe water detected. Avoid drinking.</h2>
+<p class="text-white/80 text-sm leading-relaxed">System 04-B detected pH levels outside of safe drinking parameters. Emergency filtration activated.</p>
+</div>
+</div>
+</section>
+<!-- Notification List -->
+<section class="space-y-6">
+<div class="flex justify-between items-center px-2">
+<h3 class="headline-font text-lg font-bold text-on-surface">Past Notifications</h3>
+<button class="text-primary text-sm font-semibold hover:underline">Mark all as read</button>
+</div>
+<!-- Bento-style List -->
+<div class="space-y-4">
+<!-- Notification Item 1 -->
+<div class="bg-surface-container-low rounded-xl p-5 flex items-center gap-4 transition-all hover:bg-surface-container-high group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors shrink-0">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-0.5">
+<h4 class="font-semibold text-on-surface truncate">Quality Report Ready</h4>
+<span class="text-[10px] text-outline uppercase font-bold shrink-0">2h ago</span>
+</div>
+<p class="text-sm text-outline truncate">Your weekly water quality summary is now available for review.</p>
+</div>
+</div>
+<!-- Notification Item 2 -->
+<div class="bg-surface-container-low rounded-xl p-5 flex items-center gap-4 transition-all hover:bg-surface-container-high group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors shrink-0">
+<span class="material-symbols-outlined" data-icon="construction">construction</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-0.5">
+<h4 class="font-semibold text-on-surface truncate">Maintenance Scheduled</h4>
+<span class="text-[10px] text-outline uppercase font-bold shrink-0">Yesterday</span>
+</div>
+<p class="text-sm text-outline truncate">Filter sensor calibration scheduled for tomorrow at 09:00 AM.</p>
+</div>
+</div>
+<!-- Notification Item 3 (Informational) -->
+<div class="bg-surface-container-low rounded-xl p-5 flex items-center gap-4 transition-all hover:bg-surface-container-high group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors shrink-0">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-0.5">
+<h4 class="font-semibold text-on-surface truncate">Safe Level Restored</h4>
+<span class="text-[10px] text-outline uppercase font-bold shrink-0">Oct 24</span>
+</div>
+<p class="text-sm text-outline truncate">TDS levels in Kitchen Sink have returned to optimal ranges.</p>
+</div>
+</div>
+<!-- Notification Item 4 (Update) -->
+<div class="bg-surface-container-low rounded-xl p-5 flex items-center gap-4 transition-all hover:bg-surface-container-high group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-white transition-colors shrink-0">
+<span class="material-symbols-outlined" data-icon="update">update</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-0.5">
+<h4 class="font-semibold text-on-surface truncate">System Update Complete</h4>
+<span class="text-[10px] text-outline uppercase font-bold shrink-0">Oct 22</span>
+</div>
+<p class="text-sm text-outline truncate">Firmware version 2.4.0 successfully deployed to all nodes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Analytics Teaser (Bento Element) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-highest rounded-xl p-6 flex flex-col justify-between h-40 overflow-hidden relative group">
+<div class="z-10">
+<span class="headline-font text-[10px] font-bold uppercase tracking-wider text-primary">Status Trend</span>
+<h3 class="headline-font text-xl font-bold mt-1">98% uptime</h3>
+</div>
+<div class="absolute right-[-20px] bottom-[-20px] opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" data-icon="monitoring">monitoring</span>
+</div>
+</div>
+<div class="bg-primary rounded-xl p-6 flex flex-col justify-between h-40 text-white overflow-hidden relative">
+<div class="z-10">
+<span class="headline-font text-[10px] font-bold uppercase tracking-wider text-white/70">Support</span>
+<h3 class="headline-font text-xl font-bold mt-1">Need help with an alert?</h3>
+</div>
+<button class="z-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-4 py-2 rounded-full text-xs font-bold w-fit transition-colors">
+                    Contact Tech
+                </button>
+<div class="absolute right-[-10px] bottom-[-10px] opacity-20">
+<span class="material-symbols-outlined text-[100px]" data-icon="support_agent">support_agent</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-safe bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-[0px_-4px_24px_rgba(25,28,35,0.04)] rounded-t-[1.5rem]">
+<!-- Dashboard -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-all active:scale-90 duration-150 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Dashboard</span>
+</a>
+<!-- Alerts (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-blue-700 to-blue-500 text-white rounded-[1rem] px-4 py-2 active:scale-90 duration-150 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Alerts</span>
+</a>
+<!-- History -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-all active:scale-90 duration-150 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">History</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-all active:scale-90 duration-150 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Settings</span>
+</a>
+</nav>
+</body></html>
